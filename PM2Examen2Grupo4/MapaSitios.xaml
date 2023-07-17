@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="PM2Examen2Grupo4.MapaSitios">
+    <ContentPage.Title>
+        MAPA DE SITIO
+    </ContentPage.Title>
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Text="{Binding Latitud}" x:Name="mtxtLat" IsEnabled="False"/>
+            <Entry Text="{Binding Longitud}" x:Name="mtxtLon" IsEnabled="False"/>
+            <Label Text="{Binding Descripcion}" FontSize="16" HorizontalOptions="Center" x:Name="nomSitio" IsVisible="false"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <BoxView Grid.Column="0" BackgroundColor="Transparent" WidthRequest="20" />
+                <map:Map x:Name="Mapa" Grid.Column="1"
+             IsShowingUser="true"
+             VerticalOptions="FillAndExpand"
+             HorizontalOptions="FillAndExpand"
+             HeightRequest="400"
+             WidthRequest="580" />
+                <BoxView Grid.Column="2" BackgroundColor="Transparent" WidthRequest="20" />
+            </Grid>
+            <Button x:Name="btnVerM" Text="Ver en google maps" Clicked="btnVerM_Clicked" WidthRequest="150" FontAttributes="Bold" Margin="10,5,10,5" TextTransform="None" FontSize="18" />
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

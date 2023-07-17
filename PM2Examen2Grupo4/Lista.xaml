@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mm="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             x:Class="PM2Examen2Grupo4.Lista"
+             Title="Ubicaciones Guardadas"
+             IconImageSource="ubig.png">
+    <ContentPage.Title>
+        LISTA DE SITIOS
+    </ContentPage.Title>
+    <ContentPage.Content>
+        <Grid Padding="20">
+            <ListView x:Name="listViewSitios" ItemTapped="ListViewSitios_ItemTapped">
+                <ListView.Header>
+                    <Grid Padding="20,0,40,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="ID" FontAttributes="Bold" FontSize="20" />
+                        <Label Grid.Column="1" Text="Descripción" FontAttributes="Bold" FontSize="20" Margin="25,0,0,0" />
+                    </Grid>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="video.png" HeightRequest="24" WidthRequest="24" />
+                                <Label Grid.Column="1" Text="{Binding Id}" />
+                                <Label Grid.Column="2" Text="{Binding Descripcion}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

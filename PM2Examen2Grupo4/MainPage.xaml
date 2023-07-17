@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             x:Class="PM2Examen2Grupo4.MainPage"
+             IconImageSource="ubi.png">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <StackLayout HorizontalOptions="Center">
+                    <StackLayout>
+                        <video:VideoPlayer
+                x:Name="videoP" 
+                BackgroundColor="White"
+                HorizontalOptions="Center"
+                HeightRequest="200" 
+                />
+
+                        <ImageButton
+                    x:Name="btnGrabarVideo"
+                    Clicked="BtnGrabarVideo_Clicked"
+                    Source="play.png"
+                    HeightRequest="50" 
+                    VerticalOptions="Center"    
+                    BackgroundColor="Transparent" 
+                    Margin="0,10,0,0" />
+                    </StackLayout>
+
+                    <Label Text="Latitud actual:" FontAttributes="Bold" Margin="20,0,0,0"/>
+                    <Frame CornerRadius="40" BackgroundColor="#F2F2F2" HasShadow="True" WidthRequest="350" HeightRequest="1" Margin="15,2,15,2">
+
+                        <Entry 
+            Text="{Binding Latitud}"  
+            x:Name="txtlatitud" 
+            Placeholder="Latitud" 
+            Keyboard="Text" 
+            Margin="0,-30,0,-30"
+            FontSize="15" 
+            IsReadOnly="True"/>
+
+                    </Frame>
+
+
+                    <Label Text="Longitud actual:" FontAttributes="Bold" Margin="20,0,0,0"/>
+
+                    <Frame CornerRadius="40" BackgroundColor="#F2F2F2" HasShadow="True" WidthRequest="350" HeightRequest="1" Margin="15,2,15,2">
+
+                        <Entry 
+            Text="{Binding Longitud}" 
+            x:Name="txtlongitud" 
+            Placeholder="Longitud" 
+            Keyboard="Text" 
+            Margin="0,-30,0,-30" 
+            FontSize="15" 
+            IsReadOnly="True"/>
+
+                    </Frame>
+
+
+                    <Label Text="Describa la ubicación:" FontAttributes="Bold" Margin="30,0,0,0"/>
+                    <Frame CornerRadius="40" BackgroundColor="#F2F2F2" HasShadow="True" WidthRequest="350" HeightRequest="1" Margin="15,2,15,2">
+
+                        <Editor 
+            Text="{Binding Descripcion}" 
+            x:Name="txtdescripcion" 
+            HeightRequest="50" 
+            Margin="0,-20,0,-30" 
+            Keyboard="Text" 
+            Placeholder="Describa la ubicación"  
+            FontSize="15"/>
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <ImageButton Source="audio.png" x:Name="btnGrabarAudio" Clicked="BtnGrabarAudio_Clicked"
+     
+                HeightRequest="50" 
+                WidthRequest="100" 
+                BackgroundColor="Transparent"
+                VerticalOptions="Center">
+                        </ImageButton>
+                        <ImageButton x:Name="btnDetener" Source="stop.png"  Clicked="BtnDetener_Clicked" IsEnabled="False" BackgroundColor="Transparent"
+          
+                HeightRequest="50" 
+                WidthRequest="100" 
+                VerticalOptions="Center">
+                        </ImageButton>
+                    </StackLayout>
+                    <StackLayout>
+                            <Button Text="Guardar" x:Name="BtnGuardar" Clicked="BtnGuardar_Clicked" Margin="40,2,40,1"  TextTransform="None" FontSize="18" FontAttributes="Bold"  />
+                        
+                            <Button Text="Ubicaciones" x:Name="btnlista" Clicked="btnlista_Clicked" Margin="40,2,40,1"  TextTransform="None" FontSize="18" FontAttributes="Bold"/>
+                        </StackLayout>
+                  
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

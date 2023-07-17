@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2Examen2Grupo4.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#56C5CF</Color>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#56C5CF"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

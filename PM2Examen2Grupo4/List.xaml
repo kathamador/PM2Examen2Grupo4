@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:mm="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             x:Class="PM2Examen2Grupo4.List">
+    <ContentPage.Title>
+        VIDEO Y AUDIO
+    </ContentPage.Title>
+    <ContentPage.Content>
+        <StackLayout>
+            <mm:VideoView x:Name="videov" HeightRequest="500" ShowControls="True"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <ImageButton Source="audio.png" x:Name="btnescucharAudio" Clicked="btnescucharAudio_Clicked"
+                HeightRequest="50" 
+                WidthRequest="100" 
+                BackgroundColor="Transparent"
+                VerticalOptions="Center">
+                </ImageButton>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
