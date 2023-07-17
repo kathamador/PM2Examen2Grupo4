@@ -1,4 +1,4 @@
-#Integrantes Programación Móvil 2 - Grupo 4
+Integrantes Programación Móvil 2 - Grupo 4
 
 - Katherin Nicole Amador Maradiaga - 202010110004
 - Mirian Fatima Ordoñez Amador - 202010110107
